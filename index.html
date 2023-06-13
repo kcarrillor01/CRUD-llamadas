@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c95f5e00b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="columns is-mobile is-centered" id="usuario">
+        <article id="tab1">
+            <div class="card-header">
+              <main class="main-content">
+                <div class="crud-container">
+                  <div class="crud-header">
+                    <h1>Estudiantes registrados</h1>
+                    <button class="button is-success" id="openRegister">
+                      <i class="fas fa-plus"></i>
+                      <span>Registrar Usuario</span>
+                    </button>
+                  </div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Numero Propietario</th>
+                        <th>Numero al que llamo</th>
+                      </tr>
+                    </thead>
+                    <tbody id="studentsTable">
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </main>
+              <div class="modal" id="modal">
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Registrar Llamada</p>
+                    <button class="delete" arial-label="close" id="closeRegisterModal"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <!-- Content ... -->
+                  <form id="register-form">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Escribe tu nombre" name="nombre">
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Telefono Propietario</label>
+                        <div class="control has-icons-left">
+                          <input class="input" type="tel" placeholder="Escribe tu numero de telefono" name="numPro">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Telefono al que llamo</label>
+                        <div class="control has-icons-left">
+                          <input class="input" type="tel" placeholder="Escribe tu numero de telefono" name="numLla">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </div>
+                        </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button is-success" type="submit">
+                      <i class="fas fa-save"></i>
+                      <span>Guardar Usuario</span>
+                      </button>
+                  </form>
+                  </footer>
+                </div>
+              </div>
+              <div class="modal" id="modal-update">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Actualizar Usuario</p>
+                    <button class="delete" arial-label="close" id="closeUpdateModal"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <!-- Content ... -->
+                  <form id="update-form">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Escribe tu nombre" name="nombre">
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Telefono Propietario</label>
+                        <div class="control has-icons-left">
+                          <input class="input" type="tel" placeholder="Escribe tu numero de telefono" name="numPro">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Telefono al que llamo</label>
+                        <div class="control has-icons-left">
+                          <input class="input" type="tel" placeholder="Escribe tu numero de telefono" name="numLla">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </div>
+                        </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button is-success" type="submit">
+                      <i class="fas fa-save"></i>
+                      <span>Actualizar Llamada</span>
+                      </button>
+                  </form>
+                  </footer>
+                </div>
+              </div>
+            </div>
+        </article>
+      </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
